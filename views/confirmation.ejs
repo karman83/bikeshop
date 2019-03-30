@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>confirmation</title>
+    <meta charset="utf-8">
+    <title>BikeShop - Home</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/a7ec7986bf.js"></script>
+  </head>
+     <body>
+      <div class="container">
+
+        <div class="row" id="shop-header">
+          <div class="col-12">
+            <img id="logo-header" src="/images/bike-logo.svg" alt=""> The Bike Shop Experience
+          </div>
+          <div class="input-group mb-3">
+          <form class="/index" action="index.html" method="post">
+            <input type="text" class="form-control" placeholder="Login" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary btn btn-outline-info btn-sm" type="submit" id="button-addon2">Log</button>
+            </div>
+          </form>
+          </div>
+
+        </div>
+        <br>
+        <br>
+        <div class="row">
+
+            <p>Felicitation, votre achat est confirme.</p>
+          <% for(var i = 0 ; i < dataCardBike.length ; i++){ %>
+            <% var totalCmd = 0;
+             for(var j = 0 ; j < dataCardBike.length ; j++){
+               totalCmd = totalCmd + dataCardBike[i].price*dataCardBike[i].quantity %>
+
+        <div class="btn btn-outline-secondary btn btn-outline-info btn-sm">
+          <br>
+          <br>
+
+          <ul> votre commande:
+            <li>Client:</li>
+            <li>Articles:<%=dataCardBike[i].name%></li>
+            <li>Total: <%=totalCmd%>€</li>
+          </ul>
+        </div>
+        <% }
+      } %>
+
+    </div>
+
+      </div>
+    </body>
+</html>
